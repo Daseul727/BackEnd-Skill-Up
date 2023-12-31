@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MainController {
 
     /**
-     * only view return
-     * @return
+     * @return only view
      */
     @GetMapping(value = "/index")
     public String index(){
@@ -23,9 +22,8 @@ public class MainController {
     }
 
     /**
-     * view and data(model) return
-     * @param model
-     * @return
+     * @param model parameter
+     * @return view and data(model) return
      */
     @GetMapping(value = "/index-model")
     public String indexModel(Model model){
@@ -34,10 +32,9 @@ public class MainController {
     }
 
     /**
-     * get parameter + view and data return
-     * @param model
-     * @param userName
-     * @return
+     * @param model parameter
+     * @param userName parameter
+     * @return view and data return
      */
     @GetMapping(value = "/index-param")
     public String indexParam(Model model, @RequestParam("userName") String userName){
@@ -46,8 +43,7 @@ public class MainController {
     }
 
     /**
-     * ResponseEntity return
-     * @return
+     * @return ResponseEntity
      */
     @GetMapping(value = "/index-rest")
     public @ResponseBody ResponseEntity indexRest() {
