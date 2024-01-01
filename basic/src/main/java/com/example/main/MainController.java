@@ -1,13 +1,11 @@
 package com.example.main;
 
+import com.example.main.domain.PostDto;
 import com.example.utils.api.ApiResponseEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/main")
@@ -42,12 +40,29 @@ public class MainController {
         return "/user/index";
     }
 
+    @PostMapping(value = "/index-request")
+    public String indexRequest(@RequestBody PostDto postDto) {
+        return "/user/index";
+    }
+
     /**
      * @return ResponseEntity
      */
     @GetMapping(value = "/index-rest")
     public @ResponseBody ResponseEntity indexRest() {
         //json type으로 반환하기 위하여 @ResponseBody 어노테이션이 필요함
+        return ApiResponseEntity
+                .builder()
+                .ok();
+    }
+
+    /**
+     * @return ResponseEntity
+     */
+    @ResponseBody
+    @GetMapping(value = "/index-rest2")
+    public ResponseEntity indexRest2() {
+        //@ResponseBody 어노테이션은 return type 앞에 위치한것보다 현재의 형태가 제일 깔끔해 보인다
         return ApiResponseEntity
                 .builder()
                 .ok();

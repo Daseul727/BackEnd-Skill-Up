@@ -40,7 +40,7 @@
 - @RequestMapping GET == GetMapping
 - 단독으로 사용되기보단 prefix 개념으로 class 전체 어노테이션으로 사용되는 경우가 많음
 
-- 아래 소스코드는 동일함
+- 아래 소스코드는 동일한 작동을 함
   ```java
   @RequestMapping(value = "/main", method = RequestMethod.GET)
   public String index() {
@@ -50,6 +50,41 @@
   @GetMapping(value = "/main")
   public String index2() {
       return "";
+  }
+  ```
+### 4. @RequestBody
+- Client 에서 요청 시 복수의 parameter 를 전달받을 때 사용
+- json 기반의 Http Body 를 자바객체로 변환
+  - Client 에서 보낸 json body를 객체형태로 매핑
+- 예시 소스코드 : MainController
+  - Client
+  ```javascript
+  var param = {
+      title : "1111",
+      content : "hello",
+      userName : "admin"
+  }
+  ```
+
+  - Controller
+  ```java
+  @PostMapping(value = "/index-request")
+    public String indexRequest(@RequestBody PostDto postDto) {
+        return "/user/index";
+    }
+  ```
+### 4. @ResponseBody
+- Client 로 data 반환 시 사용한다
+- data 를 json 으로 바꿔 반환한다
+- 예시 소스코드 : MainController
+  - ResponseEntity 반환 시 Client 에 들어오는 데이터
+
+  ```javascript
+  var response = {
+        "data": {
+            "loginId": "admin"
+        },
+        "status": 200
   }
   ```
 
