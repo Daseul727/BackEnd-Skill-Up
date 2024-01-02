@@ -97,6 +97,18 @@ public class TestConfig {
       return "";
   }
   ```
+  
+### @RequestParam
+- Client 요청 URI 에서 전달되는 파라미터를 메소드 인자와 매칭
+- 휴먼에러 방지를 위해 name 속성을 같이 쓰는게 좋음!
+```java
+ @GetMapping(value = "/main")
+public String index(@RequestParam String nickname, 
+                    @RequestParam(name="age") String age) {
+        return "";
+}
+```
+
 ### @RequestBody
 - Client 에서 요청 시 복수의 parameter 를 전달받을 때 사용
 - json 기반의 Http Body 를 자바객체로 변환
