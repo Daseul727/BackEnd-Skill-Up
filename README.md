@@ -4,6 +4,7 @@
 - Service, ServiceImpl
 - Entity, dto
 - mybatis, JPA
+- file
 
 # 2. Multi Module Spring boot
 Basic spring boot 프로젝트 + 멀티모듈
