@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    //core
     implementation project(':demo-core')
 
     testImplementation platform('org.junit:junit-bom:5.9.1')

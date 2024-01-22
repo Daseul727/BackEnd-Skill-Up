@@ -56,6 +56,7 @@ project(':demo-main') {
 		archivesBaseName = 'demo-main'
 	}
 	dependencies {
+		//컴파일 시 core 로드
 		compileOnly project(':demo-core')
 	}
 }
@@ -65,11 +66,13 @@ project(':demo-admin') {
 		archivesBaseName = 'demo-admin'
 	}
 	dependencies {
+		//컴파일 시 core 로드
 		compileOnly project(':demo-core')
 	}
 }
 
 project(':demo-core') {
+	//bootJar로 패키징 할 필요 없음 Main() 메서드 필요없기때문
 	bootJar { enabled = false }
 	jar { enabled = true }
 }
