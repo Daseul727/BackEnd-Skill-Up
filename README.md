@@ -7,9 +7,11 @@
 - file
 
 # 2. Multi Module Spring boot
-Basic spring boot 프로젝트 + 멀티모듈
-- build.gradle
-
+공통모듈을 사용하는 멀티모듈 spring boot java 프로젝트
+- setting modules relationship
+- settings per module
+- use core module
+  
 # 3. Security Spring boot
 Basic spring boot + security
 - spring security
