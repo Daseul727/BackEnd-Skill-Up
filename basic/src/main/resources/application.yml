@@ -10,3 +10,7 @@ spring:
     generate-ddl: true
     defer-datasource-initialization: true
     open-in-view: false
+
+# mybatis
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml

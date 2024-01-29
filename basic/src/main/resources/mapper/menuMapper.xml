@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.menu.application.MenuMapper">
+
+    <resultMap id="menuDto" type="com.example.menu.application.dto.MenuDto">
+        <id property="id" column="ID"/>
+        <result property="menuName" column="MENU_NAME"/>
+        <result property="ordering" column="ORDERING"/>
+        <collection property="children" ofType="com.example.menu.application.MenuDto">
+            <id property="id" column="CHILD_ID"/>
+            <result property="menuName" column="CHILD_MENU_NAME"/>
+            <result property="ordering" column="CHILD_ORDERING"/>
+        </collection>
+    </resultMap>
+
+    <select id="getMenuList" resultMap="menuDto">
+        SELECT
+               M1.MENU_NAME,
+               M1.ORDERING,
+               M2.MENU_NAME AS CHILD_MENU_NAME,
+               M2.ORDERING AS CHILD_MENU_ORDERING
+        FROM DE_MENU M1
+        LEFT JOIN DE_MENU M2 ON M1.ID = M2.PARENT_ID AND M2.USE_YN = 'Y'
+            WHERE M1.USE_YN = 'Y'
+        ORDER BY M1.ORDERING ASC, M2.ORDERING ASC
+    </select>
+</mapper>
