@@ -18,6 +18,9 @@ public class ApiResponseEntity extends ResponseEntity<Map<String, Object>> {
         super(body, status);
     }
 
+    public static Builder data() {
+        return new Builder();
+    }
 
     public static Builder builder() {
         return new Builder();

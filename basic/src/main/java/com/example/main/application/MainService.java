@@ -10,5 +10,11 @@ public interface MainService {
      * post 목록 조회
      * @return post dto list
      */
-    public List<PostDto> getPost();
+    public List<PostDto> getPostList();
+
+    /**
+     * post 상세 조회
+     * @return
+     */
+    public PostDto getPost(long id);
 }

@@ -13,4 +13,9 @@ public class PostDto {
     private String title;
     private String content;
     private String userName;
+
+    public PostDto(Post entity) {
+        this.title = entity.getTitle();
+        this.content = entity.getContent();
+    }
 }
