@@ -1,14 +1,12 @@
 package com.example.main;
 
 import com.example.main.application.MainService;
-import com.example.main.domain.PostDto;
+import com.example.main.application.dto.PostDto;
 import com.example.utils.api.ApiResponseEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -39,6 +37,11 @@ public class MainRestController {
     }
 
 
+    /**
+     * use jpa example
+     * @param postId
+     * @return
+     */
     @ResponseBody
     @GetMapping("/post/{postId}")
     public ResponseEntity getMainCategoryChild(@PathVariable long postId) {

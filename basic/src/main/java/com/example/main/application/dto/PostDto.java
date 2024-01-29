@@ -1,5 +1,6 @@
-package com.example.main.domain;
+package com.example.main.application.dto;
 
+import com.example.main.domain.Post;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

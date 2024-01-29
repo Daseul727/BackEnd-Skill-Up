@@ -1,6 +1,6 @@
 package com.example.main;
 
-import com.example.main.domain.PostDto;
+import com.example.main.application.dto.PostDto;
 import com.example.utils.api.ApiResponseEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

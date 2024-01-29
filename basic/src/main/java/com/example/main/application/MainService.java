@@ -1,6 +1,6 @@
 package com.example.main.application;
 
-import com.example.main.domain.PostDto;
+import com.example.main.application.dto.PostDto;
 
 import java.util.List;
 

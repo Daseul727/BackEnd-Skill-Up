@@ -2,7 +2,7 @@ package com.example.main.structure;
 
 import com.example.main.application.MainService;
 import com.example.main.domain.Post;
-import com.example.main.domain.PostDto;
+import com.example.main.application.dto.PostDto;
 import com.example.main.domain.PostRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
