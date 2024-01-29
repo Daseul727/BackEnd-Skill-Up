@@ -29,4 +29,8 @@ public class Post {
     @NotNull
     private String content;
 
+    @Column
+    private String imagePath;
+
+
 }

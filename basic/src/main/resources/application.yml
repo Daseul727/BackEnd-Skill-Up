@@ -14,3 +14,9 @@ spring:
 # mybatis
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
+
+#file setting
+file:
+  upload:
+    path: /home/ubuntu/upload/
+    max-file-size: 5242880 #5 * 1024 * 1024 = 5MB

@@ -17,4 +17,10 @@ public interface MainService {
      * @return
      */
     public PostDto getPost(long id);
+
+    /**
+     * post 추가
+     * @param postDto
+     */
+    public void addPost(PostDto postDto) throws Exception;
 }
