@@ -1,5 +1,42 @@
+# Basic Spring Boot Project
 
-# Annotation
+Spring boot 프로젝트 개발 시 참고 가능한 기본 예제 프로젝트
+
+## Skills
+- Rest Api
+- JPA, mybatis
+- File
+
+## Index
+1. [Structure](#Structure)
+2. [Annotation](#Annotacion)
+3. [Utils](#Utils)
+
+## Structure
+패키지명 : com.example
+
+### Main
+- Controller, RestController 예제
+- JPA 예제
+
+### Menu
+- mybatis 예제
+
+### File
+- 파일업로드 예제
+
+### Utils
+- 공통 BaseEntity, ApiResponseEntity 예제
+
+### Application
+- Dto, Service
+### domain
+- Entity, Repository
+### structure
+- Service 구현로직(ServiceImpl), querydsl
+
+
+## Annotation
 Spring framework 에 해당 클래스/메소드가 어떤 역할을 하는지 알림
 
 ### @Component
@@ -148,7 +185,8 @@ public String index(@RequestParam String nickname,
 ### @Service
 - 비즈니스 로직을 구현하는 객체에 사용
 
-# Utils
+
+## Utils
 
 #### 1. ApiResponseEntity
 - ResponseEntity 커스텀 객체
