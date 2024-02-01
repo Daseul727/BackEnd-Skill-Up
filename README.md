@@ -4,7 +4,7 @@
 - Service, ServiceImpl
 - Entity, dto
 - mybatis, JPA
-- file
+- file upload
 
 # 2. Multi Module Spring boot
 공통모듈을 사용하는 멀티모듈 spring boot java 프로젝트
