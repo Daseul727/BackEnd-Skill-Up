@@ -11,8 +11,3 @@
 - setting modules relationship
 - settings per module
 - use core module
-  
-# 3. Security Spring boot
-Basic spring boot + security 작성중..
-- spring security
-- Sns join, login
